@@ -1,0 +1,17 @@
+.card-grid {
+	margin: 20px;
+	display: grid;
+	grid-template-columns: 360px 360px 360px;
+}
+
+.card {
+	padding: 20px;
+	min-height: 300px;
+	width: 300px;
+	border-radius: 5px;
+	border: 1px solid #f9f9f9;
+}
+
+.card img {
+	width: 300px;
+}
