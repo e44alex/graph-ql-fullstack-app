@@ -2,6 +2,7 @@ import { gql, useQuery } from '@apollo/client';
 import { Book } from '../shared/types';
 import { WithLoader } from '../shared/components/Loader.tsx';
 import './Books.css';
+import { useDebugValue } from 'react';
 
 const GET_BOOKS = gql`
   {
@@ -20,6 +21,8 @@ export function Books() {
   const { loading, error, data } = useQuery(GET_BOOKS);
 
   if (error) return <p>Error : {error.message}</p>;
+
+  useDebugValue(loading ? 'В сети' : 'Не в сети');
 
   return <WithLoader isLoading={loading}>
     <div className={'card-grid'}>

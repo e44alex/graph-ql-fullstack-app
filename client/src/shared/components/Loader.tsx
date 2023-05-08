@@ -1,18 +1,19 @@
-import { ReactChildren, ReactElement } from 'react';
+import { ReactElement } from 'react';
 
 export const Loader = () => {
-  return <p>Loading...</p>
-}
+  return <p>Loading...</p>;
+};
 
 export type WithLoaderProps = {
   children: ReactElement
   isLoading: boolean;
 }
 
-export const WithLoader = ({children, isLoading}: WithLoaderProps) => {
+export const WithLoader = ({ children, isLoading }: WithLoaderProps) => {
+
   if (isLoading) {
-    return <Loader/>
+    return <Loader />;
   }
 
-  return <>{children}</>
-}
+  return <>{children}</>;
+};
